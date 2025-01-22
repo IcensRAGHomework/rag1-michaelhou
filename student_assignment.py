@@ -160,7 +160,9 @@ def generate_hw02(question):
     month = parsered_info['month']
     #test1 = query_holiday_by_api_raw_dict()
     result = query_holiday(year, month)
-    return json.dumps(result)
+    return json.dumps({
+        'Result': result
+    })
 
     
 def generate_hw03(question2, question3):
